@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS Demo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #ffe7ef, #fff);
+      color: #222;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      background-color: #ff4f81;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      font-size: 1.4rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.7;
+      letter-spacing: 1px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: white;
+      width: 90%;
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      border: 2px solid #ff4f81;
+      font-size: 1.8rem;
+      font-weight: bold;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+      transition: 0.3s ease;
+    }
+
+    header:hover {
+      transform: translateY(-3px);
+    }
+
+    /* ===== CONTENT BOX ===== */
+    .box {
+      background-color: white;
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 22px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 10px #ff4f81;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px rgba(203, 5, 5, 0.18);
+    }
+
+    h2 {
+      color: #ff4f81;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-top: 6px;
+    }
+
+    img {
+      width: 60%;
+      display: block;
+      margin: 15px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.04);
+    }
+
+    /* ===== TABLE ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ff4f81;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffe5ef;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #ff4f81;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+
+    /* ===== RESPONSIVE MEDIA QUERY ===== */
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      img {
+        width: 85%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+     
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#Image">Images</a></li>
+      <li><a href="#Table">Table</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    Basic HTML & CSS Demo Website
+  </header>
+
+  <!-- CONTENT BOXES -->
+  <div class="box" id="Home">
+    <h2>Headings & Paragraphs</h2>
+    <p>HTML allows us to format and present content on webpages.</p>
+    <p><b>Bold</b>, <i>Italic</i>, and <u>Underline</u> are basic text formatting options.</p>
+  </div>
+
+  <div class="box" id="Home">
+    <h2>Useful Links</h2>
+    <p>Click to visit popular websites:</p>
+    <ul>
+      <li><a href="https://google.com" target="_blank">Google</a></li>
+      <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+      <li><a href="https://wikipedia.org" target="_blank">Wikipedia</a></li>
+    </ul>
+  </div>
+
+  <div class="box" id="Image">
+    <h2>Image Example</h2>
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Nature">
+    <p>This image is displayed using the <code>&lt;img&gt;</code> tag.</p>
+  </div>
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quisquam sed ut esse similique molestias! Soluta dignissimos praesentium at temporibus tenetur quo atque, cupiditate obcaecati laborum, modi totam asperiores error inventore ex esse dolor, voluptatibus iure.</div>
+
+  <div class="box" id="Table">
+    <h2>Table Example</h2>
+    <table>
+      <tr>
+        <th>Sr. No</th>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>HTML</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Alice</td>
+        <td>CSS</td>
+        <td>90</td>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    Created by Sarthak • 2025
+  </footer>
+
+</body>
+</html>
