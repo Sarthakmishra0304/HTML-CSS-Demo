@@ -93,7 +93,7 @@
       box-shadow: 0 6px 15px rgba(255, 2, 179, 0.25);
     }
 
-    .box:a:visited{ color: greenyellow; }
+    .box a:visited{ color: greenyellow; }
 
     h2 {
       color: #ff4f81;
